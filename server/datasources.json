@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./"
+  },
+  "cmsdbdtsource": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "cmsdbv1",
+    "password": "root",
+    "name": "cmsdbdtsource",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

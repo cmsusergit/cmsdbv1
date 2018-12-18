@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "CourseInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "DepartmentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentBatchInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentClassInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "OrganizationInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "AcademicYearInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentAcadProgress": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentGuardianInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "SubjectInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TeachingSchemeLoadDetail": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "container": {
+    "dataSource": "storage",
+    "public": true
+  },
+  "DdClassSchedule": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TimeTableInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TtLocationInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TimetableRecordInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  }
+}
