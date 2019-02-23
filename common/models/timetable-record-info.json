@@ -46,7 +46,6 @@
     },
     "fSubjectId": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
@@ -63,7 +62,6 @@
     },
     "fFacultyId": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
@@ -80,7 +78,6 @@
     },
     "fLocationId": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,

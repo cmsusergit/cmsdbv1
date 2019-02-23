@@ -1,5 +1,5 @@
 {
-  "name": "TtLocationInfo",
+  "name": "AttndanceInfo",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,10 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "tt_location_info"
+    "table": "attndance_info"
   },
   "properties": {
-    "locId": {
+    "attId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "loc_id",
+        "columnName": "att_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -27,48 +27,48 @@
       },
       "_selectable": false
     },
-    "locName": {
-      "type": "String",
-      "required": false,
-      "length": 45,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "loc_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "locDescription": {
-      "type": "String",
-      "required": false,
-      "length": 255,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "loc_description",
-        "dataType": "varchar",
-        "dataLength": 255,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "fDeptName": {
-      "type": "String",
+    "attPresent": {
+      "type": "Boolean",
       "required": true,
-      "length": 45,
+      "length": null,
+      "precision": 1,
+      "scale": null,
+      "mysql": {
+        "columnName": "att_present",
+        "dataType": "bit",
+        "dataLength": null,
+        "dataPrecision": 1,
+        "dataScale": null,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "fclassscheduleid": {
+      "type": "Number",
+      "required": true,
+      "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "fDeptName",
+        "columnName": "fClassScheduleId",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "fstudenrollId": {
+      "type": "String",
+      "required": true,
+      "length": 14,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "fStudEnroll_ID",
         "dataType": "varchar",
-        "dataLength": 45,
+        "dataLength": 14,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "N"

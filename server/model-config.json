@@ -39,39 +39,11 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "DepartmentInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "StudentBatchInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "StudentClassInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "OrganizationInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   },
   "AcademicYearInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "StudentInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "StudentAcadProgress": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "StudentGuardianInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "SubjectInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   },
@@ -83,10 +55,6 @@
     "dataSource": "storage",
     "public": true
   },
-  "DdClassSchedule": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "TimeTableInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
@@ -96,6 +64,46 @@
     "public": true
   },
   "TimetableRecordInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "SubjectInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "DdClassSchedule": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TeachingLoadInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "DepartmentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentAcadProgress": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "FacultyPersonalInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentBatchInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentGuardianInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "AttndanceInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

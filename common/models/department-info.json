@@ -78,16 +78,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "studentClassInfos": {
-      "type": "hasMany",
-      "model": "StudentClassInfo",
-      "foreignKey": "fDeptName",
-      "options": {
-        "nestRemoting": true
-      }
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

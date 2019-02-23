@@ -18,5 +18,15 @@
     "name": "cmsdbdtsource",
     "user": "root",
     "connector": "mysql"
+  },
+  "employeeModule": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "cmsdbver1",
+    "password": "root",
+    "name": "employeeModule",
+    "user": "root",
+    "connector": "mysql"
   }
 }

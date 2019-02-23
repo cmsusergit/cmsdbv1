@@ -18,7 +18,6 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "id": true,
         "columnName": "stu_guardian_id",
         "dataType": "int",
         "dataLength": null,
@@ -174,6 +173,7 @@
     },
     "stuId": {
       "type": "Number",
+      "id": true,
       "required": true,
       "length": null,
       "precision": 10,

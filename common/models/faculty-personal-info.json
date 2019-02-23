@@ -1,5 +1,5 @@
 {
-  "name": "StudentAcadProgress",
+  "name": "FacultyPersonalInfo",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,10 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "student_acad_progress"
+    "table": "faculty_personal_info"
   },
   "properties": {
-    "studentAcadProgressId": {
+    "facultyId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "student_acad_progress_id",
+        "columnName": "faculty_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -27,30 +27,110 @@
       },
       "_selectable": false
     },
-    "studentAcadProgressBatch": {
+    "facultyCollegeId": {
       "type": "String",
       "required": false,
-      "length": 10,
+      "length": 25,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "student_acad_progress_batch",
+        "columnName": "faculty_college_id",
         "dataType": "varchar",
-        "dataLength": 10,
+        "dataLength": 25,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "studentAcadProgressStatus": {
+    "facultyTitle": {
+      "type": "String",
+      "required": false,
+      "length": 15,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "faculty_title",
+        "dataType": "varchar",
+        "dataLength": 15,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "facultyFirstName": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "faculty_first_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "facultyMiddleName": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "faculty_middle_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "facultyLastName": {
+      "type": "String",
+      "required": false,
+      "length": 45,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "faculty_last_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "facultyStatus": {
+      "type": "String",
+      "required": false,
+      "length": 15,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "faculty_status",
+        "dataType": "varchar",
+        "dataLength": 15,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "facultyDesignation": {
       "type": "String",
       "required": false,
       "length": 20,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "student_acad_progress_status",
+        "columnName": "faculty_designation",
         "dataType": "varchar",
         "dataLength": 20,
         "dataPrecision": null,
@@ -59,55 +139,7 @@
       },
       "_selectable": true
     },
-    "studentAcadProgressStatusUpdateDate": {
-      "type": "Date",
-      "required": false,
-      "length": null,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "student_acad_progress_status_update_date",
-        "dataType": "date",
-        "dataLength": null,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "studentAcadProgressStatusDescription": {
-      "type": "String",
-      "required": false,
-      "length": 100,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "student_acad_progress_status_description",
-        "dataType": "varchar",
-        "dataLength": 100,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "Y"
-      },
-      "_selectable": true
-    },
-    "studentAcadProgressSem": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "student_acad_progress_sem",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "studentInfoStuId": {
+    "teachingLoadInfoTloadId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -115,7 +147,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "student_info_stu_id",
+        "columnName": "teaching_load_info_tload_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
