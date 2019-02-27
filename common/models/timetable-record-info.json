@@ -254,7 +254,7 @@
     }
   },
   "validations": [],
-  "relations": {   
+  "relations": {
     "ddClassSchedules": {
       "type": "hasMany",
       "model": "DdClassSchedule",
