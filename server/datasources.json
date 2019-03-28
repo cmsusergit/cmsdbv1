@@ -9,8 +9,10 @@
     "provider": "filesystem",
     "root": "./"
   },
+
+
   "cmsdbdtsource": {
-    "host": "localhost",
+    "host": "100.100.102.177",
     "port": 3306,
     "url": "",
     "database": "cmsdbv1",
@@ -20,7 +22,7 @@
     "connector": "mysql"
   },
   "employeeModule": {
-    "host": "localhost",
+    "host": "100.100.102.177",
     "port": 3306,
     "url": "",
     "database": "cmsdbver1",
