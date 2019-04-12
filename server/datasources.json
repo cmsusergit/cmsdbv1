@@ -9,8 +9,6 @@
     "provider": "filesystem",
     "root": "./"
   },
-
-
   "cmsdbdtsource": {
     "host": "100.100.102.177",
     "port": 3306,
@@ -30,5 +28,21 @@
     "name": "employeeModule",
     "user": "root",
     "connector": "mysql"
+  },
+  "emailID": {
+    "name": "emailID",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "auth": {
+          "user": "cmsusergit@gmail.com",
+          "pass": "cmsuser@1248"
+        }
+      }
+    ]
   }
 }

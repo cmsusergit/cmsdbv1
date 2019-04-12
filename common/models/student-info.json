@@ -686,10 +686,29 @@
         "nullable": "N"
       },
       "_selectable": false
+    },
+    "stuStatus": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "mysql": {
+        "columnName": "stu_status",
+        "dataType": "int",
+        "nullable": "Y"
+      },
+      "_selectable": true
     }
   },
   "validations": [],
-  "relations": {    
+  "relations": {
+    "studentGuardianInfos": {
+      "type": "hasMany",
+      "model": "StudentGuardianInfo",
+      "foreignKey": "stuId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
   },
   "acls": [],
   "methods": {}
