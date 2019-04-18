@@ -44,18 +44,18 @@
       },
       "_selectable": false
     },
-    "timetableDeptName": {
-      "type": "String",
+    "timetableDeptId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "timetable_dept_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "timetable_dept_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false

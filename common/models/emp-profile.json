@@ -107,18 +107,18 @@
       },
       "_selectable": true
     },
-    "department": {
-      "type": "String",
+    "deptId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "department",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "dept_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
@@ -413,16 +413,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "empEducationDetails": {
-      "type": "hasMany",
-      "model": "EmpEducationDetail",
-      "foreignKey": "empId",
-      "options": {
-        "nestRemoting": true
-      }
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

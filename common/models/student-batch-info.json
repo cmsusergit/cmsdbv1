@@ -12,8 +12,7 @@
   "properties": {
     "batchName": {
       "type": "String",
-      "id": true,
-      "required": true,
+      "required": false,
       "length": 45,
       "precision": null,
       "scale": null,
@@ -23,45 +22,43 @@
         "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
-    "fClassName": {
-      "type": "String",
-      "id": true,
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+    "fClassId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_class_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
+        "columnName": "f_class_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
-    "fDeptName": {
-      "type": "String",
-      "id": true,
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+    "fDeptId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_dept_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
+        "columnName": "f_dept_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
-    "fOrganizationId": {
+    "batchId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -69,7 +66,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "f_organization_id",
+        "columnName": "batch_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,

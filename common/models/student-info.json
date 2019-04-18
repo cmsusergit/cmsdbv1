@@ -619,70 +619,66 @@
       },
       "_selectable": true
     },
-    "fCourseName": {
-      "type": "String",
-      "id": true,
+    "fCourseId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_course_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "f_course_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "fBatchName": {
-      "type": "String",
-      "id": true,
+    "fBatchId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_batch_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "f_batch_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "fClassName": {
-      "type": "String",
-      "id": true,
+    "fClassId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_class_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "f_class_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "fDeptName": {
-      "type": "String",
-      "id": true,
+    "fDeptId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_dept_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "f_dept_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
@@ -691,9 +687,14 @@
       "type": "Number",
       "required": false,
       "length": null,
+      "precision": 3,
+      "scale": 0,
       "mysql": {
         "columnName": "stu_status",
-        "dataType": "int",
+        "dataType": "tinyint",
+        "dataLength": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
         "nullable": "Y"
       },
       "_selectable": true

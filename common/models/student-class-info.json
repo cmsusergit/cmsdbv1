@@ -12,8 +12,7 @@
   "properties": {
     "className": {
       "type": "String",
-      "id": true,
-      "required": true,
+      "required": false,
       "length": 45,
       "precision": null,
       "scale": null,
@@ -23,28 +22,27 @@
         "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
-    "fDeptName": {
-      "type": "String",
-      "id": true,
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+    "fDeptId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 19,
+      "scale": 0,
       "mysql": {
-        "columnName": "f_dept_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
+        "columnName": "f_Dept_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": 19,
+        "dataScale": 0,
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     },
-    "fOrganizationId": {
+    "classId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -52,7 +50,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "f_organization_id",
+        "columnName": "class_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -63,7 +61,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "studentBatchInfos": {
+      "type": "hasMany",
+      "model": "StudentBatchInfo",
+
+
+      "foreignKey": "fClassId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

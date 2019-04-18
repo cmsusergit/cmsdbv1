@@ -12,7 +12,6 @@
   "properties": {
     "deptName": {
       "type": "String",
-      "id": true,
       "required": true,
       "length": 45,
       "precision": null,
@@ -59,7 +58,7 @@
       },
       "_selectable": true
     },
-    "fOrganizationId": {
+    "deptId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -67,7 +66,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "f_organization_id",
+        "columnName": "dept_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -78,7 +77,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "studentClassInfos": {
+      "type": "hasMany",
+      "model": "StudentClassInfo",
+      "foreignKey": "fDeptId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
