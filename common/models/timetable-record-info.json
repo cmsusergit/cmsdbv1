@@ -257,7 +257,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "ddClassSchedules": {
+      "type": "hasMany",
+      "model": "DdClassSchedule",
+      "foreignKey": "ftimetableid",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
