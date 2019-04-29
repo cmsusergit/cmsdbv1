@@ -12,7 +12,6 @@
   "properties": {
     "facultyId": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
@@ -27,34 +26,34 @@
       },
       "_selectable": false
     },
-    "deptName": {
-      "type": "String",
+    "deptId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "dept_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "dept_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
     },
-    "courseName": {
-      "type": "String",
+    "courseId": {
+      "type": "Number",
       "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
       "mysql": {
-        "columnName": "course_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
+        "columnName": "course_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
         "nullable": "N"
       },
       "_selectable": false
@@ -107,22 +106,6 @@
       },
       "_selectable": false
     },
-    "className": {
-      "type": "String",
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "class_name",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
     "semId": {
       "type": "Number",
       "required": true,
@@ -138,6 +121,39 @@
         "nullable": "N"
       },
       "_selectable": false
+    },
+    "lpId": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "lp_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "classId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "class_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "Y"
+      },
+      "_selectable": true
     }
   },
   "validations": [],
@@ -145,7 +161,7 @@
     "lpUnits": {
       "type": "hasMany",
       "model": "LpUnit",
-      "foreignKey": "lp_id",
+      "foreignKey": "lpId",
       "options": {
         "nestRemoting": true
       }

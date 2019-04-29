@@ -38,7 +38,6 @@ Studentinfo.remoteMethod('getNameByEnrollment',{
 
 
 Studentinfo.validatesUniquenessOf('stuEnroll', {message: 'Student enrollment required unique'})
-Studentinfo.validatesUniquenessOf('stuEmail', {message: 'Student Email required unique'})
 Studentinfo.validatesUniquenessOf('stuCollegeId', {message: 'Student CollegeId required unique'})
 Studentinfo.observe('after save',(context,next)=>{
   if(context.isNewInstance){
@@ -53,28 +52,6 @@ Studentinfo.observe('after save',(context,next)=>{
   }
 })
 
-Studentinfo.observe('before delete',(context,next)=>{
-    const user_model=app1.models.UserAccount;
-    Studentinfo.findOne({where:context.where,fields:{stuEnroll:1}},(error,dt)=>{
-      if(!error){
-        console.log(JSON.stringify(dt));
-        const ob={where:{username:dt.stuEnroll}};
-        user_model.findOne({where:{username:dt.stuEnroll}},(error,tt)=>{
-          if(!error){
-
-
-
-
-
-            user_model.destroyById(tt.id,next)
-          }
-          else {
-            console.log('****',error);
-          }
-        })
-      }
-    })
-})
 // Studentinfo.addStudent=function(studentInfo,cb){
 // }
 //

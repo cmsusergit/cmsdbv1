@@ -1,5 +1,5 @@
 {
-  "name": "LpUnit",
+  "name": "Userrolemapping",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,42 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "lp_unit"
+    "table": "userrolemapping"
   },
   "properties": {
-    "unitId": {
+    "roleId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "role_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "userId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "user_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "id": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,71 +50,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "unit_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "lpId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "lp_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "gtuUnitno": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "gtu_unitno",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "gtuUnitname": {
-      "type": "String",
-      "required": true,
-      "length": 150,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "gtu_unitname",
-        "dataType": "varchar",
-        "dataLength": 150,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "gtuUnithrs": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "gtu_unithrs",
+        "columnName": "id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -93,16 +61,7 @@
     }
   },
   "validations": [],
-  "relations": {
-    "lpTopics": {
-      "type": "hasMany",
-      "model": "LpTopic",
-      "foreignKey": "unitId",
-      "options": {
-        "nestRemoting": true
-      }
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

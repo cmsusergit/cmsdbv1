@@ -65,8 +65,6 @@
     "studentBatchInfos": {
       "type": "hasMany",
       "model": "StudentBatchInfo",
-
-
       "foreignKey": "fClassId",
       "options": {
         "nestRemoting": true

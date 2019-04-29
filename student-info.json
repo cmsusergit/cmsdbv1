@@ -709,14 +709,6 @@
       "options": {
         "nestRemoting": true
       }
-    },
-    "studentPastAcadrecords": {
-      "type": "hasMany",
-      "model": "StudentPastAcadrecord",
-      "foreignKey": "stuId",
-      "options": {
-        "nestRemoting": true
-      }
     }
   },
   "acls": [],

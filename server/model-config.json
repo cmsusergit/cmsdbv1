@@ -83,18 +83,6 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "LpId": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "LpTopic": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "LpUnit": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "UserAccount": {
     "dataSource": "cmsdbdtsource",
     "public": true
@@ -135,6 +123,34 @@
     "public": true
   },
   "StudentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "Userrole": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "Userrolemapping": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentPastAcadrecord": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "CourseObj": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "LpTopic": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "LpId": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "LpUnit": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

@@ -413,7 +413,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "empEducationDetails": {
+      "type": "hasMany",
+      "model": "EmpEducationDetail",
+      "foreignKey": "empId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

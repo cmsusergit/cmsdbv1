@@ -1,5 +1,5 @@
 {
-  "name": "LpTopic",
+  "name": "StudentPastAcadrecord",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,10 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "lp_topic"
+    "table": "student_past_acadrecord"
   },
   "properties": {
-    "topicId": {
+    "stuAcadid": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "topic_id",
+        "columnName": "stu_acadId",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -27,101 +27,101 @@
       },
       "_selectable": false
     },
-    "unitId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "unit_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "topic": {
+    "stuCourseName": {
       "type": "String",
-      "required": true,
-      "length": 200,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "topic",
-        "dataType": "varchar",
-        "dataLength": 200,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "tMethod": {
-      "type": "String",
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "t_method",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "tAid": {
-      "type": "String",
-      "required": true,
-      "length": 45,
-      "precision": null,
-      "scale": null,
-      "mysql": {
-        "columnName": "t_aid",
-        "dataType": "varchar",
-        "dataLength": 45,
-        "dataPrecision": null,
-        "dataScale": null,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "onlinePost": {
-      "type": "Number",
       "required": false,
-      "length": null,
-      "precision": 3,
-      "scale": 0,
+      "length": 45,
+      "precision": null,
+      "scale": null,
       "mysql": {
-        "columnName": "online_post",
-        "dataType": "tinyint",
-        "dataLength": null,
-        "dataPrecision": 3,
-        "dataScale": 0,
+        "columnName": "stu_course_name",
+        "dataType": "varchar",
+        "dataLength": 45,
+        "dataPrecision": null,
+        "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
     },
-    "coId": {
+    "stuBoardUni": {
+      "type": "String",
+      "required": false,
+      "length": 120,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "stu_board_uni",
+        "dataType": "varchar",
+        "dataLength": 120,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "stuPassingYear": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "stu_passing_year",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "stuGrade": {
       "type": "Number",
-      "required": true,
+      "required": false,
+      "length": null,
+      "precision": 22,
+      "scale": null,
+      "mysql": {
+        "columnName": "stu_grade",
+        "dataType": "double",
+        "dataLength": null,
+        "dataPrecision": 22,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "stuGradeSystem": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "stu_grade_system",
+        "dataType": "varchar",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
+    "stuId": {
+      "type": "Number",
+      "required": false,
       "length": null,
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "co_id",
+        "columnName": "stu_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
         "dataScale": 0,
-        "nullable": "N"
+        "nullable": "Y"
       },
-      "_selectable": false
+      "_selectable": true
     }
   },
   "validations": [],

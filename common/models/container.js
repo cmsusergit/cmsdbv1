@@ -5,7 +5,6 @@ const XLSX=require('xlsx')
 const studentdt=require('./student-info.js')
 module.exports = function(Container) {
   Container.afterRemote('upload',(ct,mInst,next)=>{
-    console.log(`****${JSON.stringify(mInst.result.fields.type)}****`);
     let filepath=path.resolve(__dirname+'/../../',mInst.result.files.excel[0].container,mInst.result.files.excel[0].name);
     console.log('****',filepath);
     let wb=XLSX.readFile(filepath)
