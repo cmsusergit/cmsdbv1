@@ -1,5 +1,5 @@
 {
-  "name": "TtLocationInfo",
+  "name": "EmpDesignation",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,10 +7,10 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "tt_location_info"
+    "table": "emp_designation"
   },
   "properties": {
-    "locId": {
+    "desgId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -18,7 +18,7 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "loc_id",
+        "columnName": "desg_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -27,54 +27,37 @@
       },
       "_selectable": false
     },
-    "locName": {
+    "desgName": {
       "type": "String",
-      "required": false,
+      "required": true,
       "length": 45,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "loc_name",
+        "columnName": "desg_name",
         "dataType": "varchar",
         "dataLength": 45,
         "dataPrecision": null,
         "dataScale": null,
-        "nullable": "Y"
+        "nullable": "N"
       },
-      "_selectable": true
+      "_selectable": false
     },
-    "locDescription": {
+    "desgAlias": {
       "type": "String",
       "required": false,
-      "length": 255,
+      "length": 20,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "loc_description",
+        "columnName": "desg_alias",
         "dataType": "varchar",
-        "dataLength": 255,
+        "dataLength": 20,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       },
       "_selectable": true
-    },
-    "fDeptId": {
-      "type": "number",
-      "id": true,
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "fDeptId",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
     }
   },
   "validations": [],

@@ -1,5 +1,5 @@
 {
-  "name": "Userrolemapping",
+  "name": "Loadcalc",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -7,42 +7,10 @@
   },
   "mysql": {
     "schema": "cmsdbv1",
-    "table": "userrolemapping"
+    "table": "loadcalc"
   },
   "properties": {
-    "roleId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "role_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "userId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "user_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "id": {
+    "lcId": {
       "type": "Number",
       "id": true,
       "required": true,
@@ -50,7 +18,71 @@
       "precision": 10,
       "scale": 0,
       "mysql": {
-        "columnName": "id",
+        "columnName": "lc_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "ayId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "ay_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "deptId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "dept_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "courseId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "course_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "semId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "sem_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,
@@ -62,10 +94,10 @@
   },
   "validations": [],
   "relations": {
-    "userrole": {
-      "type": "belongsTo",
-      "model": "Userrole",
-      "foreignKey": "roleId",
+    "loadcalcDepts": {
+      "type": "hasMany",
+      "model": "LoadcalcDept",
+      "foreignKey": "lcId",
       "options": {
         "nestRemoting": true
       }

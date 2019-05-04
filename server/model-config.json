@@ -39,20 +39,12 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "AcademicYearInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "TeachingSchemeLoadDetail": {
     "dataSource": "cmsdbdtsource",
     "public": true
   },
   "container": {
     "dataSource": "storage",
-    "public": true
-  },
-  "TtLocationInfo": {
-    "dataSource": "cmsdbdtsource",
     "public": true
   },
   "SubjectInfo": {
@@ -151,6 +143,26 @@
     "public": true
   },
   "LpUnit": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TtLocationInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "Loadcalc": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "LoadcalcDept": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "AcademicYearInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "EmpDesignation": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

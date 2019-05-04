@@ -31,12 +31,6 @@ Studentinfo.remoteMethod('getNameByEnrollment',{
     http:{path:'/getNameByEnrollment',verb:'post'},
     returns:{arg:'studentNameList',type:'array'}
   })
-
-
-
-
-
-
 Studentinfo.validatesUniquenessOf('stuEnroll', {message: 'Student enrollment required unique'})
 Studentinfo.validatesUniquenessOf('stuEmail', {message: 'Student Email required unique'})
 Studentinfo.validatesUniquenessOf('stuCollegeId', {message: 'Student CollegeId required unique'})
@@ -61,11 +55,6 @@ Studentinfo.observe('before delete',(context,next)=>{
         const ob={where:{username:dt.stuEnroll}};
         user_model.findOne({where:{username:dt.stuEnroll}},(error,tt)=>{
           if(!error){
-
-
-
-
-
             user_model.destroyById(tt.id,next)
           }
           else {
@@ -75,6 +64,7 @@ Studentinfo.observe('before delete',(context,next)=>{
       }
     })
 })
+
 // Studentinfo.addStudent=function(studentInfo,cb){
 // }
 //

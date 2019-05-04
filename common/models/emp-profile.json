@@ -91,16 +91,15 @@
       },
       "_selectable": true
     },
-    "designation": {
-      "type": "String",
+    "designationId": {
+      "type": "Number",
       "required": false,
-      "length": 15,
       "precision": null,
       "scale": null,
       "mysql": {
-        "columnName": "designation",
-        "dataType": "varchar",
-        "dataLength": 15,
+        "columnName": "designation_id",
+        "dataType": "int",
+        "dataLength": null,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
