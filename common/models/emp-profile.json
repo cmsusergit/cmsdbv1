@@ -420,6 +420,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "proxyInfos": {
+      "type": "hasMany",
+      "model": "ProxyInfo",
+      "foreignKey": "fFacultyid",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

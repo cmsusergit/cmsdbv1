@@ -75,10 +75,6 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "UserAccount": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "Email": {
     "dataSource": "emailID"
   },
@@ -163,6 +159,14 @@
     "public": true
   },
   "EmpDesignation": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "UserAccount": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ProxyInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

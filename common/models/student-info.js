@@ -40,10 +40,19 @@ Studentinfo.observe('after save',(context,next)=>{
     const user1={
       username:context.instance.stuEnroll,
       password:context.instance.stuEnroll,
-      roleList:'STUDENT',
-      email:context.instance.stuEmail
+      email:context.instance.stuEmail,
+      userType:2
     };
-    user_model.create(user1,next)
+    user_model.create(user1,function(error,ob){
+        const temp={
+          id:0,
+          roleId:3,
+          userId:ob.id
+        }
+        console.log('****',JSON.stringify(ob));
+        const rolemapping_model=app1.models.Userrolemapping;
+        rolemapping_model.create(temp,next)
+    })
   }
 })
 

@@ -5,7 +5,21 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "userType": {
+      "type": "Number",
+      "length": null,
+      "scale": 0,
+      "mysql": {
+        "columnName": "usertype",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 2,
+        "dataScale": 0,
+        "nullable": "N"
+      }
+    }
+  },
   "validations": [],
   "relations": {
     "userroles": {
