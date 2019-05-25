@@ -43,16 +43,31 @@ Studentinfo.observe('after save',(context,next)=>{
       email:context.instance.stuEmail,
       userType:2
     };
-    user_model.create(user1,function(error,ob){
+    user_model.create(user1)
+      .then(rr=>{
         const temp={
-          id:0,
-          roleId:3,
-          userId:ob.id
-        }
-        console.log('****',JSON.stringify(ob));
-        const rolemapping_model=app1.models.Userrolemapping;
-        rolemapping_model.create(temp,next)
-    })
+
+              id:0,
+              roleId:3,
+              userId:rr.id
+            }
+           const rolemapping_model=app1.models.Userrolemapping;
+           rolemapping_model.create(temp,next)
+      })
+      .catch(error=>{
+        console.log('****',error);
+        next(error,null)
+      })
+    // user_model.create(user1,function(error,ob){
+    //     console.log('****',JSON.stringify(ob));
+    //     const temp={
+    //       id:0,
+    //       roleId:3,
+    //       userId:ob.id
+    //     }
+    //     const rolemapping_model=app1.models.Userrolemapping;
+    //     rolemapping_model.create(temp,next)
+    // })
   }
 })
 

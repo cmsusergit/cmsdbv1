@@ -1,10 +1,9 @@
-'use strict';
+'use strict'
 const app1 = require('../../server/server')
 
 module.exports = function(Empprofile) {
   Empprofile.validatesUniquenessOf('empCode', {message: 'Employee Code required unique'})
   Empprofile.validatesUniquenessOf('email', {message: 'Employee Email required unique'})
-
   Empprofile.observe('after save',(context,next)=>{
     if(context.isNewInstance){
       const user_model=app1.models.UserAccount;
@@ -14,7 +13,9 @@ module.exports = function(Empprofile) {
         email:context.instance.email,
         userType:1
       };
-      user_model.create(user1,function(error,ob){
+      user_model.create(user1)
+        .then(ob=>{
+          console.log(`%%%%${JSON.stringify(ob)}%%%%`);
           const temp=[{
             id:0,
             roleId:4,
@@ -31,9 +32,12 @@ module.exports = function(Empprofile) {
           const rolemapping_model=app1.models.Userrolemapping;
           rolemapping_model.create(temp,next)
       })
+      .catch(error=>{
+        console.log("****",error);
+        next(error,null)
+      })
     }
   })
-
   Empprofile.observe('before delete',(context,next)=>{
       const user_model=app1.models.UserAccount;
 

@@ -90,10 +90,6 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "TimetableRecordInfo": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
   "EmpProfile": {
     "dataSource": "cmsdbdtsource",
     "public": true
@@ -167,6 +163,10 @@
     "public": true
   },
   "ProxyInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "TimetableRecordInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

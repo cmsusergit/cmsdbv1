@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const _ =require('lodash')
 
 module.exports = function(Timetablerecordinfo) {
@@ -128,7 +128,6 @@ module.exports = function(Timetablerecordinfo) {
          arg:'attndList',
          type:'Object'
        }
-
 
 
 
