@@ -18,14 +18,14 @@ module.exports = function(Empprofile) {
           console.log(`%%%%${JSON.stringify(ob)}%%%%`);
           const temp=[{
             id:0,
-            roleId:4,
+            roleId:2,
             userId:ob.id
           }]
           console.log(`----${context.instance.isTeaching}----`);
           if(context.instance.isTeaching){
             temp.push({
               id:0,
-              roleId:2,
+              roleId:4,
               userId:ob.id
             })
           }
@@ -37,6 +37,10 @@ module.exports = function(Empprofile) {
         next(error,null)
       })
     }
+    else{
+      next()
+    }
+
   })
   Empprofile.observe('before delete',(context,next)=>{
       const user_model=app1.models.UserAccount;
@@ -50,10 +54,24 @@ module.exports = function(Empprofile) {
               user_model.destroyById(tt.id,next)
             }
             else {
-              console.log('****',error);
+              console.log('****',error);next(error,null)
             }
           })
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        next(error,null)
       })
   })
 };

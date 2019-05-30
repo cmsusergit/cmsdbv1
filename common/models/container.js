@@ -16,7 +16,7 @@ module.exports = function(Container) {
     if(mInst.result.fields.type[0]=='studentlist'){
       const studentInfo=app.models.StudentInfo;
       studentInfo.create(xcelDt1,next)
-    }
+    }  
     else if(mInst.result.fields.type[0]=='employeelist'){
       const employeeProfile=app.models.EmpProfile;
       employeeProfile.create(xcelDt1,next)

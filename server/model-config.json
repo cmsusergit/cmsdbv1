@@ -169,5 +169,13 @@
   "TimetableRecordInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
+  },
+  "Circular": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "Todo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
   }
 }

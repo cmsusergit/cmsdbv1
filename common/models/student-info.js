@@ -69,6 +69,9 @@ Studentinfo.observe('after save',(context,next)=>{
     //     rolemapping_model.create(temp,next)
     // })
   }
+  else {
+    next()
+  }
 })
 
 Studentinfo.observe('before delete',(context,next)=>{

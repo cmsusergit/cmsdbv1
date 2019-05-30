@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const _ =require('lodash')
 
 module.exports = function(Timetableinfo) {
@@ -36,7 +36,8 @@ module.exports = function(Timetableinfo) {
 
 
 
-  Timetableinfo.getAttdBySubjectId=function(ayId,subjectId,cb){
+
+  Timetableinfo.getAttdBySubjectId=function(ayId,classId,subjectId,cb){
     Timetableinfo.find({
         where:{
           fAyearInfoId:ayId
@@ -45,6 +46,7 @@ module.exports = function(Timetableinfo) {
           relation:"timetableRecordInfos",
           scope:{
               where:{
+                fClassId:classId,
                 fSubjectId:subjectId,
                 ttLoadType:"Theory"
               },
@@ -81,7 +83,14 @@ module.exports = function(Timetableinfo) {
           arg:'ayId',
           type:'number'
         },
-        {arg:'subjectId',type:'number'}
+        {
+          arg:'classId',
+          type:'number'
+        },
+        {
+          arg:'subjectId',
+          type:'number'
+        }
       ],
         http:{
           path:'/getAttdBySubjectId',
