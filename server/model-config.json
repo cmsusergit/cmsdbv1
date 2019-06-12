@@ -162,7 +162,11 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "ProxyInfo": {
+  "Circular": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "Todo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   },
@@ -170,11 +174,7 @@
     "dataSource": "cmsdbdtsource",
     "public": true
   },
-  "Circular": {
-    "dataSource": "cmsdbdtsource",
-    "public": true
-  },
-  "Todo": {
+  "ProxyInfo": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

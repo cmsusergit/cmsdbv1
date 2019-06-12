@@ -10,6 +10,7 @@ module.exports = function(Timetablerecordinfo) {
         fields:{
           ttId:1
         },
+
         include:{
           relation:"ddClassSchedules",
           scope:{
@@ -38,6 +39,40 @@ module.exports = function(Timetablerecordinfo) {
          type:'Object'
        }
   });
+
+
+  Timetablerecordinfo.getFreeFacultyList=function(ob,cb){
+      Timetablerecordinfo.find({
+          where:{
+            and:[{ttDay:ob.ttDay},{or:[{ttStartTime:ob.ttStartTime},{ttEndTime:ob.ttEndTime}]}]
+          },
+          fields:{
+            fFacultyId:1
+          }
+      }).then(rr=>{
+        cb(null,rr)
+      })
+      .catch(error=>{
+        cb(error,null)
+      })
+    }
+    Timetablerecordinfo.remoteMethod('getFreeFacultyList',{
+          accepts:[{
+            arg:'loadDetail',
+            type:'Object'
+          }],
+          http:{
+
+            path:'/getFreeFacultyList/',
+            verb:'post'
+          },
+          returns:{
+           arg:'freeFacultyList',
+           type:'Object'
+         }
+    });
+
+
   Timetablerecordinfo.getStudentAttdBySubject=function(subjectId,stuEnroll,cb){
     Timetablerecordinfo.find({
         where:{
@@ -85,7 +120,6 @@ module.exports = function(Timetablerecordinfo) {
          type:'Object'
        }
   });
-
   Timetablerecordinfo.getAttendanceListBySubject=function(id,cb){
     Timetablerecordinfo.find({
         where:{
@@ -128,14 +162,5 @@ module.exports = function(Timetablerecordinfo) {
          arg:'attndList',
          type:'Object'
        }
-
-
-
-
-
-
-
-
-
   });
 }
