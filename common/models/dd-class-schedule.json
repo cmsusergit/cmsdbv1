@@ -117,6 +117,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "timetableRecordInfo": {
+      "type": "belongsTo",
+      "model": "TimetableRecordInfo",
+      "foreignKey": "ftimetableid",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

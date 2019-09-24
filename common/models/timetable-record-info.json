@@ -265,6 +265,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "timeTableInfo": {
+      "type": "belongsTo",
+      "model": "TimeTableInfo",
+      "foreignKey": "fTimetableId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

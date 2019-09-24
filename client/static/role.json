@@ -1,0 +1,17 @@
+{
+  "role_configuration":{
+
+      "role_defination_list":[
+        {"roleId":1,"role":"CMSADMIN"},
+        {"roleId":2,"role":"EMPLOYEE"},
+        {"roleId":3,"role":"STUDENT"},
+        {"roleId":4,"role":"FACULTY"},
+        {"roleId":5,"role":"STUDENT_COORD"},
+        {"roleId":6,"role":"TT_COORD"},
+        {"roleId":7,"role":"DIRECTOR"},
+        {"roleId":8,"role":"PRINCIPAL"},
+        {"roleId":9,"role":"HOD"},
+        {"roleId":10,"role":"TRUSTEE"}
+      ]
+  }
+}

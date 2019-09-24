@@ -635,38 +635,6 @@
       },
       "_selectable": false
     },
-    "fBatchId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "f_batch_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
-    "fClassId": {
-      "type": "Number",
-      "required": true,
-      "length": null,
-      "precision": 10,
-      "scale": 0,
-      "mysql": {
-        "columnName": "f_class_id",
-        "dataType": "int",
-        "dataLength": null,
-        "dataPrecision": 10,
-        "dataScale": 0,
-        "nullable": "N"
-      },
-      "_selectable": false
-    },
     "fDeptId": {
       "type": "Number",
       "required": true,
@@ -717,9 +685,16 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "studentAllocations": {
+      "type": "hasMany",
+      "model": "StudentAllocation",
+      "foreignKey": "studentId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
-  "acls": [
-  ],
+  "acls": [],
   "methods": {}
 }

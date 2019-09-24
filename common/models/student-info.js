@@ -15,7 +15,11 @@ Studentinfo.getNameByEnrollment=function(enrollmentList,cb){
                 stuTitle:1,stuFirstname:1,stuMiddlename:1,stuLastname:1
               }
             }).then(rr=>{
-              const result=rr.stuTitle+rr.stuFirstname+" "+rr.stuMiddlename+" "+rr.stuLastname;
+              let result=rr.stuTitle+rr.stuFirstname
+              if(rr.stuMiddlename || rr.stuMiddlename=='null')
+                result+=" "+rr.stuMiddlename
+                if(rr.stuLastname || rr.stuLastname=='null')
+                  result+=" "+rr.stuLastname
               resolve(result)
             }).catch(error=>{
               console.log('****',error);

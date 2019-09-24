@@ -71,7 +71,10 @@ module.exports = function(Empprofile) {
 
 
 
-        next(error,null)
+        else{
+          next(error,null)
+
+        }
       })
   })
 };

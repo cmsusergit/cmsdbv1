@@ -3,7 +3,6 @@ module.exports = function(Ddclasschedule) {
 
   Ddclasschedule.getAttendanceList=function(ob){
     return new Promise((resolve,reject)=>{
-      console.log('++++',ob.csId);
       Ddclasschedule.findOne({
          where:{csId:ob.csId},
          include:['attndanceInfos']
@@ -11,9 +10,63 @@ module.exports = function(Ddclasschedule) {
          resolve(rr)
        })
        .catch(error=>{
+
          console.log('****',error);
          reject(error)
        })
     })
   }
+
+  Ddclasschedule.getScheduleListForReport=function(ob,cb){
+      Ddclasschedule.find({
+          where:{
+            csIsProxy:0
+          },
+          include:[{
+            relation:"timetableRecordInfo",
+            scope:{
+              where:{
+                fFacultyId:ob.facultyId,
+                fClassId:ob.classId,
+                fSubjectId:ob.subjectId,
+                ttLoadType:"Theory"
+                },
+                include:{
+                  relation:"timeTableInfo",
+                  scope:{
+                    where:{fAyearInfoId:ob.ayId}
+                  }
+                }
+            }
+          },
+          {
+            relation:"attndanceInfos",
+            scope:{
+              where:{
+                attPresent:1
+              }
+            }
+          }
+        ]
+      }).then(rr=>{
+        cb(null,rr)
+      })
+      .catch(error=>{
+        cb(error,null)
+      })
+    }
+    Ddclasschedule.remoteMethod('getScheduleListForReport',{
+          accepts:[{
+            arg:'detail',
+            type:'Object'
+          }],
+          http:{
+            path:'/getScheduleListForReport/',
+            verb:'post'
+          },
+          returns:{
+           arg:'scheduleList',
+           type:'Object'
+         }
+    });
 };

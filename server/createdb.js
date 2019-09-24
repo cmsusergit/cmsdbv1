@@ -2,7 +2,7 @@ var server = require('./server');
 var ds = server.dataSources.cmsdbdtsource;
 
 
-var lbTables = [ 'AccessToken', 'ACL', 'RoleMapping', 'Role','UserAccount'];
+var lbTables = [ 'AccessToken', 'ACL', 'RoleMapping', 'Role'];
 //
 // var lbTables=['Taxchallan','Taxcollection']
 ds.automigrate(lbTables, function(er) {

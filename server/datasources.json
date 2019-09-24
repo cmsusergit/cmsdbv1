@@ -3,6 +3,12 @@
     "name": "db",
     "connector": "memory"
   },
+  "apiproofstorage": {
+    "name": "apiproofstorage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./apiproof"
+  },
   "storage": {
     "name": "storage",
     "connector": "loopback-component-storage",
@@ -10,22 +16,12 @@
     "root": "./"
   },
   "cmsdbdtsource": {
-    "host": "100.100.102.177",
+    "host": "localhost",
     "port": 3306,
     "url": "",
-    "database": "cmsdbv1",
+    "database": "cmsdb_test",
     "password": "root",
     "name": "cmsdbdtsource",
-    "user": "root",
-    "connector": "mysql"
-  },
-  "employeeModule": {
-    "host": "100.100.102.177",
-    "port": 3306,
-    "url": "",
-    "database": "cmsdbver1",
-    "password": "root",
-    "name": "employeeModule",
     "user": "root",
     "connector": "mysql"
   },

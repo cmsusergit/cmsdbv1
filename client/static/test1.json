@@ -1,0 +1,92 @@
+{
+  "db_configuration":{
+
+    "baseURL":"http://10.10.104.87:4040/cmsdbapi"
+  },
+  "title": "Example application",
+  "facultyList": [
+        {"fName":"Hiren Patel","facultyId":1},
+        {"fName":"Milin Patel","facultyId":2}
+    ],
+  "studentStatusList":[{"status":"Regular","Code":1},{"status":"Detained","Code":0}],
+  "locationList": ["ClassRoom-205", "ClassRoom-105", "Lab-F1", "Lab-F2"],
+
+  "subjectList": ["OOPC", "OS", "Python", "OOPJ", ".Net"],
+  "batchList": ["A", "B", "C", "D"],
+  "dt_list": {
+    "time_slot_name": [
+           {
+              "name":"THEORY 09:45-10:45",
+              "startTime":"09:45",
+              "endTime":"10:45",
+              "duration":1
+           },
+           {
+              "name":"THEORY 10:45-11:45",
+              "startTime":"10:45",
+                  "endTime":"11:45",
+                "duration":1
+           },
+           {
+              "name":"THEORY 12:15-01:15",
+              "startTime":"12:15",
+                  "endTime":"01:15",
+                "duration":1
+           },
+           {
+              "name":"THEORY 01:15-02:15",
+              "startTime":"01:15",
+                  "endTime":"02:15",
+                "duration":1
+           },
+           {
+              "name":"THEORY 02:30-03:30",
+              "startTime":"02:30",
+                  "endTime":"03:30",
+                "duration":1
+           },
+           {
+              "name":"THEORY 03:30-04:30",
+              "startTime":"03:30",
+                  "endTime":"04:30",
+                "duration":1
+           },
+           {
+              "name":"PRACT 09:45-11:45",
+              "startTime":"09:45",
+                  "endTime":"11:45",
+                "duration":2
+           },
+           {
+              "name":"PRACT 12:15-02:15",
+              "startTime":"12:15",
+                  "endTime":"02:15",
+                "duration":2
+           },
+           {
+              "name":"PRACT 02:30-04:30",
+              "startTime":"02:30",
+                  "endTime":"04:30",
+                "duration":2
+           }
+    ],
+
+    "rowh": ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"],
+    "colh": [
+      "10:00 to 11:00",
+      "11:00 to 12:00",
+      "12:45 to 01:45",
+      "01:45 to 02:45",
+      "03:00 to 04:00",
+      "04:00 to 05:00"
+    ],
+    "slot_list":[
+            {"startTime":"09:45","endTime":"10:45"},
+            {"startTime":"10:45","endTime":"11:45"},
+            {"startTime":"12:15","endTime":"01:15"},
+            {"startTime":"01:15","endTime":"02:15"},
+            {"startTime":"02:30","endTime":"03:30"},
+            {"startTime":"03:30","endTime":"04:30"}
+    ]
+  }
+}

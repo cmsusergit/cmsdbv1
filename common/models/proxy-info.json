@@ -141,7 +141,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "timetableRecordInfo": {
+      "type": "belongsTo",
+      "model": "TimetableRecordInfo",
+      "foreignKey": "fTtid",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }

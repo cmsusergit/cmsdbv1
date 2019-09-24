@@ -28,20 +28,20 @@
       "_selectable": false
     },
     "attPresent": {
-      "type": "Boolean",
+      "type": "Number",
       "required": true,
       "length": null,
-      "precision": 1,
-      "scale": null,
+      "precision": 3,
+      "scale": 0,
       "mysql": {
         "columnName": "att_present",
-        "dataType": "bit",
+        "dataType": "tinyint",
         "dataLength": null,
-        "dataPrecision": 1,
-        "dataScale": null,
+        "dataPrecision": 3,
+        "dataScale": 0,
         "nullable": "N"
       },
-      "_selectable": false
+      "_selectable": true
     },
     "fclassscheduleid": {
       "type": "Number",

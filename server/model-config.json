@@ -17,22 +17,22 @@
     "dataSource": "db"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "cmsdbdtsource",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "cmsdbdtsource",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "cmsdbdtsource",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "cmsdbdtsource",
     "public": false
   },
   "OrganizationInfo": {
@@ -45,6 +45,10 @@
   },
   "container": {
     "dataSource": "storage",
+    "public": true
+  },
+  "apicontainer": {
+    "dataSource": "apiproofstorage",
     "public": true
   },
   "SubjectInfo": {
@@ -107,6 +111,10 @@
     "public": true
   },
   "StudentInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "StudentAllocation": {
     "dataSource": "cmsdbdtsource",
     "public": true
   },
@@ -175,6 +183,42 @@
     "public": true
   },
   "ProxyInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiAyear": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiEmployee": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiMeta": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiObservationHod": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiParamHod": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiTeaching": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiObservationPrincipal": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "ApiParamPrincipal": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "FdpDetail": {
     "dataSource": "cmsdbdtsource",
     "public": true
   }

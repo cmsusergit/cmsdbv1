@@ -23,6 +23,7 @@
     "nodemon": "^1.18.10",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
+    "strongloop": "^6.0.3",
     "xlsx": "^0.14.1"
   },
   "devDependencies": {
