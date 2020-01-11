@@ -46,6 +46,7 @@
     },
     "fSubjectId": {
       "type": "Number",
+
       "id": false,
       "required": true,
       "length": null,
@@ -270,6 +271,14 @@
       "type": "belongsTo",
       "model": "TimeTableInfo",
       "foreignKey": "fTimetableId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "subjectInfos": {
+      "type": "belongsTo",
+      "model": "SubjectInfo",
+      "foreignKey": "fSubjectId",
       "options": {
         "nestRemoting": true
       }

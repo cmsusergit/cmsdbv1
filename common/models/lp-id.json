@@ -165,6 +165,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "empProfile": {
+      "type": "belongsTo",
+      "model": "EmpProfile",
+      "foreignKey": "facultyId",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

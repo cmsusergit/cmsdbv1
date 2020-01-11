@@ -346,6 +346,22 @@
       },
       "_selectable": true
     },
+    "empPhoto": {
+      "type": "String",
+      "required": false,
+      "length": 250,
+      "precision": null,
+      "scale": null,
+      "mysql": {
+        "columnName": "emp_photo",
+        "dataType": "varchar",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "Y"
+      },
+      "_selectable": true
+    },
     "panNumber": {
       "type": "String",
       "required": false,
@@ -425,6 +441,38 @@
       "type": "hasMany",
       "model": "ProxyInfo",
       "foreignKey": "fFacultyid",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "apiTeachings": {
+      "type": "hasMany",
+      "model": "ApiTeaching",
+      "foreignKey": "fEmpId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "apiObservationHods": {
+      "type": "hasMany",
+      "model": "ApiObservationHod",
+      "foreignKey": "fEmpId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "apiObservationPrincipals": {
+      "type": "hasMany",
+      "model": "ApiObservationPrincipal",
+      "foreignKey": "fEmpId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "lpIds": {
+      "type": "hasMany",
+      "model": "LpId",
+      "foreignKey": "facultyId",
       "options": {
         "nestRemoting": true
       }

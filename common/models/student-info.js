@@ -1,11 +1,17 @@
 'use strict';
 const app1 = require('../../server/server')
 
+const _=require('lodash')
 module.exports = function(Studentinfo) {
 Studentinfo.getNameByEnrollment=function(enrollmentList,cb){
     let prList1=[]
     enrollmentList.map(enrollment=>{
-      console.log('----',enrollment.stuEnroll);
+      //
+      // console.log('----',enrollment.stuEnroll);
+
+
+
+
       const pr=new Promise((resolve,reject)=>{
         Studentinfo.findOne({
               where:{
@@ -15,7 +21,11 @@ Studentinfo.getNameByEnrollment=function(enrollmentList,cb){
                 stuTitle:1,stuFirstname:1,stuMiddlename:1,stuLastname:1
               }
             }).then(rr=>{
-              let result=rr.stuTitle+rr.stuFirstname
+              let result=""
+              if(rr.stuTitle)
+                result+=rr.stuTitle
+              if(rr.stuFirstname)
+                result+=" "+rr.stuFirstname
               if(rr.stuMiddlename || rr.stuMiddlename=='null')
                 result+=" "+rr.stuMiddlename
                 if(rr.stuLastname || rr.stuLastname=='null')
@@ -77,7 +87,6 @@ Studentinfo.observe('after save',(context,next)=>{
     next()
   }
 })
-
 Studentinfo.observe('before delete',(context,next)=>{
     const user_model=app1.models.UserAccount;
     Studentinfo.findOne({where:context.where,fields:{stuEnroll:1}},(error,dt)=>{
@@ -96,6 +105,37 @@ Studentinfo.observe('before delete',(context,next)=>{
     })
 })
 
+Studentinfo.getStudentFeesDetail=function(cb){
+  Studentinfo.find({
+      fields:["stuId","stuEnroll","stuCollegeId","stuTitle","stuFirstname","stuMiddlename","stuLastname","fDeptId","fCourseId"],
+      include:{
+        relation:"feesInfos",
+        scope:{
+            where:{
+            }
+        }
+
+      }
+  }).then(rr=>{
+      cb(null,rr)
+  })
+
+  .catch(error=>{
+    cb(error,null)
+  })
+};
+Studentinfo.remoteMethod('getStudentFeesDetail',{
+      accepts:[
+      ],
+      http:{
+        path:'/getStudentFeesDetail',
+        verb:'get'
+      },
+      returns:{
+       arg:'studentList',
+       type:'array'
+     }
+});
 // Studentinfo.addStudent=function(studentInfo,cb){
 // }
 //

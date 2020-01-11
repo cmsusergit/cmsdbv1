@@ -221,5 +221,25 @@
   "FdpDetail": {
     "dataSource": "cmsdbdtsource",
     "public": true
+  },
+  "EventCoordinator": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "EventInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "FeesInfo": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "FeesCategory": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
+  },
+  "FeesCount": {
+    "dataSource": "cmsdbdtsource",
+    "public": true
   }
 }

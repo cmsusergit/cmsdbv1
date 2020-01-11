@@ -71,8 +71,6 @@ module.exports = function(Timetablerecordinfo) {
            type:'Object'
          }
     });
-
-
   Timetablerecordinfo.getStudentAttdBySubject=function(subjectId,stuEnroll,cb){
     Timetablerecordinfo.find({
         where:{

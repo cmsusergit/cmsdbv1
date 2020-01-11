@@ -12,7 +12,6 @@
   "properties": {
     "subId": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
@@ -131,6 +130,23 @@
       "scale": 0,
       "mysql": {
         "columnName": "lc_id",
+        "dataType": "int",
+        "dataLength": null,
+        "dataPrecision": 10,
+        "dataScale": 0,
+        "nullable": "N"
+      },
+      "_selectable": false
+    },
+    "loadcalcDeptId": {
+      "type": "Number",
+      "id": true,
+      "required": true,
+      "length": null,
+      "precision": 10,
+      "scale": 0,
+      "mysql": {
+        "columnName": "loadcalc_dept_id",
         "dataType": "int",
         "dataLength": null,
         "dataPrecision": 10,

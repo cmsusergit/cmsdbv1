@@ -380,20 +380,20 @@
       "_selectable": true
     },
     "stuPhoto": {
-      "type": "Binary",
+      "type": "String",
       "required": false,
-      "length": 65535,
+      "length": 14,
       "precision": null,
       "scale": null,
       "mysql": {
         "columnName": "stu_photo",
-        "dataType": "blob",
-        "dataLength": 65535,
+        "dataType": "varchar",
+        "dataLength": 150,
         "dataPrecision": null,
         "dataScale": null,
         "nullable": "Y"
       },
-      "_selectable": true
+      "_selectable": false
     },
     "stuMobile": {
       "type": "String",
@@ -690,6 +690,14 @@
       "type": "hasMany",
       "model": "StudentAllocation",
       "foreignKey": "studentId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "feesInfos": {
+      "type": "hasMany",
+      "model": "FeesInfo",
+      "foreignKey": "fStuId",
       "options": {
         "nestRemoting": true
       }

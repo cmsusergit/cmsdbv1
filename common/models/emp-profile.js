@@ -58,23 +58,70 @@ module.exports = function(Empprofile) {
             }
           })
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
         else{
           next(error,null)
 
         }
       })
   })
+
+
+
+  Empprofile.getDeptSummary=function(deptId,cb){
+    Empprofile.find({
+        where:{
+          deptId:deptId
+        },
+        fields:['empId','empCode'],
+        include:[{
+
+          relation:"apiTeachings",
+          scope:{
+            fields:['id','fEmpId','gtuResult','instituteResult']
+          }},
+          {
+            relation:"apiObservationHods",
+
+            scope:{
+              where:{
+                fParamId:8
+              }
+            }
+          },
+          {
+            relation:"apiObservationPrincipals",
+            scope:{
+              where:{
+
+
+
+
+
+
+                or:[{fParamId:2},{fParamId:7}]
+              }
+            }
+          }]
+    }).then(rr=>{
+      cb(null,rr)
+    })
+    .catch(error=>{
+      cb(error,null)
+    })
+  };
+  Empprofile.remoteMethod('getDeptSummary',{
+        accepts:[{
+          arg:'deptId',
+          type:'Number'
+        },
+      ],
+        http:{
+          path:'/getDeptSummary/:deptId',
+          verb:'get'
+        },
+        returns:{
+         arg:'scoreList',
+         type:'array'
+       }
+  });
 };

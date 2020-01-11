@@ -317,7 +317,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "employeeProfile": {
+      "type": "belongsTo",
+      "model": "EmpProfile",
+      "foreignKey": "ffacultyId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
   "acls": [],
   "methods": {}
 }
